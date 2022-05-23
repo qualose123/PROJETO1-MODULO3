@@ -73,8 +73,6 @@ const findPaletaById = async () => {
 };
 
 // MODAL
-// ALTERAÇÃO EM RELAÇÃO À APOSTILA E VÍDEOS => utilizar a flag isEdit pra sinalizar que o onclick vem do botão editar.
-
 async function abrirModal(isEdit = false) {
   if (isEdit) {
     document.querySelector("#title-header-modal").innerText =
@@ -129,7 +127,7 @@ async function submitPaleta() {
     foto,
   };
 
-  const modoEdicaoAtivado = !!id; // transforma valor em booleano => explico melhor segunda sobre eventos.
+  const modoEdicaoAtivado = !!id; 
 
   const endpoint = baseUrl + (modoEdicaoAtivado ? `/update/${id}` : "/create");
 
